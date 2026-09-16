@@ -1,0 +1,9 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { Callout } from "@/components/sections";
+import { Footer, Header, Reveal } from "@/components/site-shell";
+import { blogPosts } from "@/lib/content";
+
+export const metadata = { title: "Blog", description: "Notes on AI systems, automation, data products, and building useful technology." };
+
+export default function BlogPage() { return <><Header /><main><section className="bg-blue px-5 pb-24 pt-40 sm:px-8 sm:pb-32 sm:pt-52"><div className="mx-auto max-w-7xl"><p className="label text-coral">Notes from the work</p><h1 className="mt-6 max-w-4xl font-display text-6xl leading-[.95] tracking-tight sm:text-8xl">Ideas worth making time for.</h1><p className="mt-10 max-w-xl text-lg leading-relaxed text-ink/60">Perspectives on building useful AI, better digital products, and teams that can keep learning.</p></div></section><section className="px-5 py-24 sm:px-8 sm:py-32"><div className="mx-auto grid max-w-7xl gap-5 lg:grid-cols-3">{blogPosts.map((post, index) => <Reveal key={post.slug}><Link href={`/blog/${post.slug}`} className={`group block border-t border-ink/20 pt-5 ${index === 0 ? "lg:col-span-2" : ""}`}><div className={`mb-8 flex min-h-56 items-end rounded-2xl p-6 ${post.accent}`}><span className="label text-ink/50">{post.category}</span></div><div className="flex items-start justify-between gap-4"><h2 className="max-w-md font-display text-3xl leading-tight">{post.title}</h2><ArrowUpRight className="shrink-0 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" /></div><p className="mt-4 max-w-lg text-sm leading-relaxed text-ink/60">{post.excerpt}</p><p className="mt-6 text-xs text-ink/45">{post.date} · {post.readTime}</p></Link></Reveal>)}</div></section><Callout /></main><Footer /></> }

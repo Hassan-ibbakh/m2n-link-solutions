@@ -1,1 +1,54 @@
 @import "tailwindcss";
+
+@theme inline {
+	--color-paper: #f4f1eb;
+	--color-ink: #18201e;
+	--color-coral: #ef735b;
+	--color-mint: #c9e4d5;
+	--color-blue: #b8d9e5;
+	--font-sans: var(--font-body);
+	--font-display: var(--font-heading);
+}
+
+:root { --font-body: "DM Sans", sans-serif; --font-heading: "Space Grotesk", sans-serif; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: #f4f1eb; color: #18201e; font-family: var(--font-body); }
+.font-display { font-family: var(--font-heading); }
+.label { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.nav-link { color: rgb(24 32 30 / .65); font-size: .875rem; transition: color .2s ease; }
+.nav-link:hover { color: #ef735b; }
+.button { align-items: center; display: inline-flex; gap: .5rem; justify-content: center; border-radius: 9999px; padding: .9rem 1.3rem; font-size: .875rem; font-weight: 700; transition: transform .2s ease, background-color .2s ease; }
+.button:hover { transform: translateY(-2px); }
+.button-dark { background: #18201e; color: #f4f1eb; }
+.button-dark:hover { background: #ef735b; color: #18201e; }
+.button-coral { background: #ef735b; color: #18201e; }
+.icon-button { display: grid; height: 2.5rem; width: 2.5rem; place-items: center; border-radius: 9999px; background: #18201e; color: #f4f1eb; }
+.signal-field { position: absolute; right: -8rem; top: 7rem; height: 30rem; width: 30rem; opacity: .7; pointer-events: none; }
+.signal-orbit { position: absolute; inset: 10%; border: 1px solid rgb(24 32 30 / .18); border-radius: 9999px; animation: signal-spin 22s linear infinite; }
+.orbit-two { inset: 24%; border-style: dashed; animation-direction: reverse; animation-duration: 15s; }
+.signal-core { position: absolute; left: 46%; top: 46%; height: 2rem; width: 2rem; border-radius: 9999px; background: #ef735b; box-shadow: 0 0 0 12px rgb(239 115 91 / .12), 0 0 50px rgb(239 115 91 / .35); animation: signal-pulse 3s ease-in-out infinite; }
+.signal-label { position: absolute; border: 1px solid rgb(24 32 30 / .15); border-radius: 9999px; padding: .35rem .6rem; background: rgb(244 241 235 / .65); font-size: .6rem; font-weight: 700; letter-spacing: .14em; }
+.label-one { left: 14%; top: 19%; animation: signal-float 4s ease-in-out infinite; }
+.label-two { right: 7%; top: 48%; animation: signal-float 5s ease-in-out .5s infinite; }
+.label-three { bottom: 12%; left: 32%; animation: signal-float 4.5s ease-in-out 1s infinite; }
+.service-card { transition: transform .35s cubic-bezier(.22,1,.36,1), background-color .35s ease; }
+.service-card:hover { transform: translateY(-5px); }
+@keyframes signal-spin { to { transform: rotate(360deg); } }
+@keyframes signal-pulse { 50% { transform: scale(1.16); box-shadow: 0 0 0 20px rgb(239 115 91 / .08), 0 0 70px rgb(239 115 91 / .45); } }
+@keyframes signal-float { 50% { transform: translateY(-8px); } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .signal-orbit, .signal-core, .signal-label { animation: none; } .button:hover { transform: none; } }
+.form-control { width: 100%; border: 1px solid rgb(24 32 30 / .2); border-radius: .75rem; background: transparent; padding: .85rem 1rem; color: #18201e; outline: none; transition: border-color .2s ease, box-shadow .2s ease; }
+.form-control:focus { border-color: #ef735b; box-shadow: 0 0 0 3px rgb(239 115 91 / .2); }
+.hero-grid { background-image: linear-gradient(rgb(24 32 30 / .07) 1px, transparent 1px), linear-gradient(90deg, rgb(24 32 30 / .07) 1px, transparent 1px); background-size: 44px 44px; }
+.hero-grid { background-image: linear-gradient(rgb(24 32 30 / .07) 1px, transparent 1px), linear-gradient(90deg, rgb(24 32 30 / .07) 1px, transparent 1px); background-size: 44px 44px; animation: grid-drift 24s linear infinite; }
+.scroll-cue { animation: cue-nudge 2.5s ease-in-out infinite; }
+@keyframes grid-drift { to { background-position: 44px 44px; } }
+@keyframes cue-nudge { 50% { transform: translateX(5px); } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .signal-orbit, .signal-core, .signal-label, .hero-grid, .scroll-cue { animation: none; } .button:hover { transform: none; } }
+.project-visual { position: relative; min-height: 330px; overflow: hidden; border-radius: 1rem; background: #b8d9e5; }
+.project-visual.coral { background: #ef735b; }
+.project-visual.mint { background: #c9e4d5; }
+.project-lines { position: absolute; inset: 16% 10%; border: 1px solid rgb(24 32 30 / .25); transform: rotate(-7deg); }
+.project-lines::after { position: absolute; inset: 17% 15%; border: 1px solid rgb(24 32 30 / .25); content: ""; transform: rotate(13deg); }
+::selection { background: #ef735b; color: #18201e; }
