@@ -14,7 +14,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const post = blogPosts.find((item) => item.slug === slug);
-  return { title: post?.title ?? "Article", description: post?.excerpt ?? "Notes from Nexa Intelligence." };
+  return { title: post?.title ?? "Article", description: post?.excerpt ?? "Notes de M2N Link Solutions." };
 }
 
 export default async function BlogPostPage({ params }: PageProps) {

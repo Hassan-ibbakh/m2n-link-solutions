@@ -12,12 +12,16 @@ import {
 } from "lucide-react";
 
 export const site = {
-  name: "Nexa Intelligence",
-  shortName: "Nexa",
+  name: "M2N Link Solutions",
+  shortName: "M2N",
   description:
-    "Nexa Intelligence builds intelligent web and mobile applications, AI systems, automation, and data products for ambitious teams.",
-  email: "hello@nexa-intelligence.com",
-  location: "Remote-first · North America & Europe",
+    "M2N Link Solutions develops intelligent web and mobile applications, AI systems, automation, and reliable digital products for ambitious organizations.",
+  email: "contact@m2nlinksolutions.ma",
+  secondaryEmail: "alaminabil46@gmail.com",
+  phone: "+212 6 66 83 89 76",
+  location: "Hassan, Rabat - Maroc",
+  address: "El Borj Domiciliation, Immeuble 7, rue Moulay Rachid, Appartement 10, 4e etage, Hassan, Rabat - Maroc",
+  mapUrl: "https://www.google.com/maps/search/?api=1&query=Rue+Moulay+Rachid+Hassan+Rabat+Maroc",
 };
 
 export const services: Array<{
@@ -45,7 +49,7 @@ export const projects = [
 ];
 
 export const testimonials = [
-  { quote: "Nexa brought the rare combination of strategic clarity and engineering depth. We went from a fuzzy opportunity to a product our teams use every day.", name: "Maya Chen", role: "VP Product, Lattice Health" },
+  { quote: "M2N brought the rare combination of strategic clarity and engineering depth. We went from a fuzzy opportunity to a product our teams use every day.", name: "Maya Chen", role: "VP Product, Lattice Health" },
   { quote: "They asked the hard questions early, then built with real momentum. The result feels considered, resilient, and genuinely useful.", name: "Jon Bell", role: "COO, SignalDesk" },
 ];
 
