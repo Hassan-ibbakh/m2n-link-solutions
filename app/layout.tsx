@@ -9,6 +9,13 @@ export const metadata: Metadata = {
   twitter: { card: "summary_large_image", title: "M2N Link Solutions | Solutions digitales intelligentes", description: "Applications web et mobiles, AI, automatisation et transformation digitale." },
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: "cover",
+};
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
