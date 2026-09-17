@@ -91,4 +91,5 @@ body { background: var(--color-paper); color: var(--color-ink); font-family: var
 @media (max-width: 640px) { .signal-field { right: -11rem; top: 8rem; height: 22rem; width: 22rem; opacity: .5; } .signal-label { font-size: .5rem; } }
 @media (max-width: 1024px) { .neural-network-background { right: -3rem; width: min(68vw, 640px); opacity: .78; } }
 @media (max-width: 640px) { .neural-network-background { right: -9rem; top: 8rem; width: min(150vw, 520px); opacity: .32; } .neural-network-background .neural-particles { display: none; } .neural-network-background .neural-orbits ellipse:nth-child(3) { display: none; } }
+@media (max-width: 420px) { .button { width: 100%; justify-content: center; } .button + a, .button + .group { width: 100%; } .logo-image { height: 2.9rem; } }
 @media (max-width: 640px) { .logo-image { height: 3.25rem; } }
